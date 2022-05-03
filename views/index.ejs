@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Google SignIn</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    Hello world!
+    <header>
+      <% if (typeof user === 'undefined') { %>
+        <a href="/register">Cadastre-se</a>
+      <% } else { %>
+        <p><%= user.email %></p>
+        <p><%= user.name %></p>
+        <img src="<%= user.picture %>" alt="">
+      <% } %> 
+    </header>
+  </body>
+</html>
